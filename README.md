@@ -13,3 +13,22 @@ A JAVA project to generate JWTs (JSON Web Tokens)
 
 
 **A. Create a Private Key and Self-Signed Digital Certificate**
+To check whether OpenSSL is installed on your computer, run the _which_ command on macOS or Linux or the _where_ command on Windows.
+> which openssl
+
+> mkdir /Users/jdoe/JWT
+> cd /Users/jdoe/JWT
+
+Generate a private key, and store it in a file called server.key.
+> openssl genpkey -des3 -algorithm RSA -pass pass:SomePassword -out server.pass.key -pkeyopt rsa_keygen_bits:2048
+> openssl rsa -passin pass:SomePassword -in server.pass.key -out server.key
+You can delete the server.pass.key file because you no longer need it.
+
+Generate a certificate signing request using the server.key file. Store the certificate signing request in a file called server.csr. Enter information about your company when prompted.
+> openssl req -new -key server.key -out server.csr
+
+Generate a self-signed digital certificate from the server.key and server.csr files. Store the certificate in a file called server.crt.
+> openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out server.crt
+
+**Source:** https://developer.salesforce.com/docs/atlas.en-us.246.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm?_ga=2.43114208.439795187.1656333652-1742453021.1655933163
+
