@@ -36,3 +36,27 @@ Generate a self-signed digital certificate from the server.key and server.csr fi
 
 **Source:** https://developer.salesforce.com/docs/atlas.en-us.246.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm?_ga=2.43114208.439795187.1656333652-1742453021.1655933163
 
+
+**B. How to convert crt and key to jks file**
+
+> openssl pkcs12 -export -in abc.crt -inkey abc.key -out abc.p12
+
+> keytool -importkeystore -srckeystore abc.p12 \
+        -srcstoretype PKCS12 \
+        -destkeystore abc.jks \
+        -deststoretype JKS
+
+Default alias is 1
+Password is what you set at the prompt
+
+**Source:** https://community.datarobot.com/t5/best-practices-use-cases/how-to-convert-crt-and-key-to-jks-file/td-p/6342
+
+
+
+
+
+
+
+
+
+
