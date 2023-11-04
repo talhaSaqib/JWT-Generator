@@ -16,6 +16,7 @@ A JAVA project to generate JWTs (JSON Web Tokens)
 To check whether OpenSSL is installed on your computer, run the _which_ command on macOS or Linux or the _where_ command on Windows.
 > which openssl
 
+(Optional) Create folder
 > mkdir /Users/jdoe/JWT
 
 > cd /Users/jdoe/JWT
