@@ -46,8 +46,8 @@ Generate a self-signed digital certificate from the server.key and server.csr fi
         -destkeystore abc.jks \
         -deststoretype JKS
 
-Default alias is 1
-Password is what you set at the prompt
+Default alias is 1.
+Password is what you set at the prompt.
 
 **Source:** https://community.datarobot.com/t5/best-practices-use-cases/how-to-convert-crt-and-key-to-jks-file/td-p/6342
 
