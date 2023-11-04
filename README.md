@@ -17,11 +17,14 @@ To check whether OpenSSL is installed on your computer, run the _which_ command 
 > which openssl
 
 > mkdir /Users/jdoe/JWT
+
 > cd /Users/jdoe/JWT
 
 Generate a private key, and store it in a file called server.key.
 > openssl genpkey -des3 -algorithm RSA -pass pass:SomePassword -out server.pass.key -pkeyopt rsa_keygen_bits:2048
+
 > openssl rsa -passin pass:SomePassword -in server.pass.key -out server.key
+
 You can delete the server.pass.key file because you no longer need it.
 
 Generate a certificate signing request using the server.key file. Store the certificate signing request in a file called server.csr. Enter information about your company when prompted.
