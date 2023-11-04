@@ -1,3 +1,8 @@
+/*
+ * Source: OAuth 2.0 JWT Bearer Flow for Server-to-Server Integration
+ * Source URL: https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_jwt_flow.htm&type=5
+ */
+
 
 import org.apache.commons.codec.binary.Base64;
 import java.io.*; 
